@@ -11,7 +11,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh; }
+  height: 100vh;
+  overflow: hidden; }
 
 *,
 *:before,
@@ -36,12 +37,19 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: sans-serif;
     -webkit-transition: 0.4s ease;
     transition: 0.4s ease;
-    position: relative; }
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: url(https://media.giphy.com/media/TyQY0zTXX4x0c/giphy.gif);
+    background-position: center; }
     .nav .link:before {
       content: "";
       width: 50%;
       height: 3px;
-      background-color: #fff;
+      background-image: url(https://media.giphy.com/media/TyQY0zTXX4x0c/giphy.gif);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       position: absolute;
       top: 50%;
       left: -100%;
@@ -53,14 +61,17 @@ h1, h2, h3, h4, h5, h6, p {
       content: "";
       width: 50%;
       height: 3px;
-      background-color: #fff;
+      background-image: url(https://media.giphy.com/media/TyQY0zTXX4x0c/giphy.gif);
+      background-position: center;
       position: absolute;
       top: 50%;
       right: -100%;
       -webkit-transform: translateY(-50%);
               transform: translateY(-50%);
       -webkit-transition: 0.4s ease;
-      transition: 0.4s ease; }
+      transition: 0.4s ease;
+      background-repeat: no-repeat;
+      background-size: cover; }
     .nav .link:hover {
       background-color: rgba(80, 56, 0, 0.35); }
       .nav .link:hover:before {
