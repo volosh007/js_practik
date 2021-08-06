@@ -35,8 +35,37 @@ h1, h2, h3, h4, h5, h6, p {
     font-size: 50px;
     font-family: sans-serif;
     -webkit-transition: 0.4s ease;
-    transition: 0.4s ease; }
+    transition: 0.4s ease;
+    position: relative; }
+    .nav .link:before {
+      content: "";
+      width: 50%;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left: -100%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease; }
+    .nav .link:after {
+      content: "";
+      width: 50%;
+      height: 3px;
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      right: -100%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%);
+      -webkit-transition: 0.4s ease;
+      transition: 0.4s ease; }
     .nav .link:hover {
       background-color: rgba(80, 56, 0, 0.35); }
+      .nav .link:hover:before {
+        left: -5%; }
+      .nav .link:hover:after {
+        right: -5%; }
 
 /*# sourceMappingURL=style.css.map */

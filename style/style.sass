@@ -29,6 +29,31 @@ h1, h2, h3, h4, h5, h6, p
         font-size: 50px
         font-family: sans-serif
         transition: .4s ease
+        position: relative
+        &:before
+            content: ''
+            width: 50%
+            height: 3px
+            background-color: #fff
+            position: absolute
+            top: 50%
+            left: -100%
+            transform: translateY(-50%)
+            transition: .4s ease
+        &:after
+            content: ''
+            width: 50%
+            height: 3px
+            background-color: #fff
+            position: absolute
+            top: 50%
+            right: -100%
+            transform: translateY(-50%)
+            transition: .4s ease
         &:hover
             background-color: rgba(80, 56, 0, 0.35)
+            &:before
+                left: -5%
+            &:after
+                right: -5%
     
